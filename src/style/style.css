@@ -1,0 +1,122 @@
+@font-face {
+	font-family: 'Humane-Regular';
+	src: url('/fonts/Humane-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Humane-SemiBold';
+	src: url('/fonts/Humane-SemiBold.ttf') format('truetype');
+}
+
+
+:root {
+	--color-white: #FFFFFF;
+	--background-color: #E2E1E1;
+	--text-color: var(--color-dark-gray);
+	--color-dark-gray: #202021;
+	--color-light-gray: #E2E1E1;
+	--hero-color: var(--color-dark-gray);
+	--color-green: #0CCA08;
+	--border: 0.5px solid var(--color-dark-gray);
+	--color-light-white: rgba(255, 255, 255, 0.24);
+}
+
+[data-theme='dark'] {
+	/* --text-color: var(--color-light-gray); */
+	--hero-color: white;
+	/* --background-color: #202021; */
+	--border: 0.5px solid var(--color-dark-gray);
+}
+
+* {
+	font-family: 'Roboto', sans-serif;
+	color: var(--text-color);
+	/* letter-spacing: 1px; */
+	box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    overflow-wrap: break-word;
+    box-sizing: inherit;
+}
+
+body {
+	background: var(--background-color);
+	font-family: Arial, sans-serif;
+	margin: 16px;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+    text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, ol, p, ul {
+    margin: 0px;
+}
+
+h1 {
+	font-size: 2.5rem;
+	font-weight: 100;
+}
+
+a {
+	text-decoration: none;
+}
+
+.big-title {
+	font-size: 400px;
+	font-family: 'Humane-SemiBold', sans-serif;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	line-height: 0.60;
+	display: block;
+	/* margin-bottom: -50px; */
+	overflow-wrap: break-word;
+	/* overflow: hidden; */
+	align-items: baseline;
+	display: flex;
+    /* margin-block-start: 0.83em; */
+    /* margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px; */
+    /* font-weight: bold; */
+    /* unicode-bidi: isolate; */
+}
+
+.title-container:hover > span {
+	color: var(--color-light-gray);
+	cursor: pointer;
+	/* background-color: red; */
+}
+
+.project-container {
+	/* background-color: red; */
+}
+
+.project-container:hover * {
+	color: var(--color-light-white);
+}
+
+/* link hover */
+li {
+	position: relative;
+	cursor: pointer;
+}
+
+li:not(:first-child)::after {
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: var(--color-dark-gray);
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 0.3s ease;
+}
+
+li:not(:first-child):hover::after {
+	transform: scaleX(1);
+	transform-origin: left;
+}
