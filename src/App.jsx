@@ -1,11 +1,13 @@
 // App.js
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import './style/style.css';
-import Navbar from './components/navbar';
-import Hero from './components/hero';
-import About from './pages/about';
-import Contact from './pages/contact';
+import { Routes, Route, useParams } from 'react-router-dom';
+import './style/style.less';
+import Navbar from './components/Navbar.jsx';
+import Home from './pages/Home.jsx';
+import About from './pages/About.jsx';
+import Contact from './pages/Contact.jsx';
+import ProjectTemplate from './templates/projectTemplate.jsx';
+import projectsData from './data/projects-data.js';
 
 const pageStyles = {
 	display: "flex",
@@ -18,13 +20,29 @@ const App = () => {
 		<main style={pageStyles}>
 			<Navbar />
 			<Routes>
-				{/* <Hero /> */}
-				<Route path="/" element={<Hero />} />
+				<Route path="/" element={<Home />} />
 				<Route path="/about" element={<About />} />
 				<Route path="/contact" element={<Contact />} />
+				<Route
+					path="/projects/:slug"
+					element={<ProjectTemplateWrapper />}
+				/>
 			</Routes>
 		</main>
 	);
+};
+
+const ProjectTemplateWrapper = () => {
+	const { slug } = useParams();
+	const project = projectsData.find(
+		(project) => project.title.toLowerCase().replace(/\s+/g, "-") === slug
+	);
+
+	if (!project) {
+		return <div>Projet non trouvé</div>; 
+	}
+
+	return <ProjectTemplate pageContext={project} />;
 };
 
 export default App;

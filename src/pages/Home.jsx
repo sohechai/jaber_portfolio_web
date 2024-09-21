@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import TitleComponent from "./titleComponent";
+import TitleComponent from "../components/TitleComponent";
 import projectData from "../data/projects-data";
-import { useNavigate } from "react-router-dom"; // Pour la navigation
+import { useNavigate } from "react-router-dom";
 
-const getHeroContainerStyle = (backgroundImage) => ({
+const getHomeContainerStyle = (backgroundImage) => ({
 	display: 'flex',
 	flexDirection: 'column',
 	justifyContent: 'flex-end',
@@ -31,7 +31,7 @@ const nameContainer = {
 	width: '100%',
 };
 
-const Hero = () => {
+const Home = () => {
 	const [backgroundImage, setBackgroundImage] = useState(null);
 	const navigate = useNavigate();
 
@@ -54,13 +54,10 @@ const Hero = () => {
 		navigate(`/projects/${slug}`); 
 	};
 
-	// const importImage = (path) => {
-	// 	return require(`${process.env.PUBLIC_URL}${path}`);
-	// };	
-
 	const renderProjects = () => {
 		return projectData.map((project, index) => {
-			// const mainImage = importImage(project.mainImage);
+			const slug = project.title.toLowerCase().replace(/\s+/g, '-'); 
+
 			return (
 				<div
 					key={index}
@@ -72,7 +69,8 @@ const Hero = () => {
 						setBackgroundImage(null);
 						handleMouseLeave();
 					}}
-					onClick={() => handleClick(project.title.toLowerCase().replace(/\s+/g, '-'))}
+					onClick={() => handleClick(slug)}
+					style={{ cursor: 'pointer' }} 
 				>
 					<TitleComponent title={project.title} description={project.subtitle} />
 				</div>
@@ -81,12 +79,12 @@ const Hero = () => {
 	};
 
 	return (
-		<section style={getHeroContainerStyle(backgroundImage)}>
+		<section style={getHomeContainerStyle(backgroundImage)}>
 			<div style={projectContainer} className="project-container">
 				{renderProjects()}
 			</div>
 			<div style={nameContainer}>
-				<svg width="1239" height="286" viewBox="0 0 1239 286" fill="var(--hero-color)" xmlns="http://www.w3.org/2000/svg">
+				<svg width="1239" height="286" viewBox="0 0 1239 286" fill="var(--Home-color)" xmlns="http://www.w3.org/2000/svg">
 					<path d="M80.8 2.99997V245.4C80.8 270.6 64.4 285.4 41.2 285.4C17.6 285.4 0.799988 270.6 0.799988 245.4V164.6H35.6V245.8C35.6 251.4 37.2 253.8 40.8 253.8C44.4 253.8 46 251.4 46 245.8V2.99997H80.8Z" />
 					<path d="M161.462 2.99997L183.462 283H145.462L142.662 213.8H129.862L127.462 283H93.0625L113.862 2.99997H161.462ZM131.062 182.6H141.462L138.262 99.4L136.662 44.2H135.862L134.662 99.4L131.062 182.6Z" />
 					<path d="M276.097 40.6V97.4C276.097 118.2 274.097 127.8 260.497 132.6V133.4C274.097 138.2 276.097 147.8 276.097 168.6V245.8C276.097 271.4 262.897 283 236.097 283H196.097V2.99997H236.497C263.297 2.99997 276.097 14.6 276.097 40.6ZM241.297 42.6C241.297 37 240.097 34.6 236.097 34.6H230.897V117.4H236.097C240.097 117.4 241.297 115 241.297 109.4V42.6ZM241.297 156.6C241.297 151 240.097 148.6 236.097 148.6H230.897V251.4H236.097C240.097 251.4 241.297 249.4 241.297 243.8V156.6Z" />
@@ -107,4 +105,4 @@ const Hero = () => {
 	);
 };
 
-export default Hero;
+export default Home;

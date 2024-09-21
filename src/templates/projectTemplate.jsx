@@ -1,5 +1,4 @@
 import React from "react";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Navbar from "../components/navbar";
 import HeaderComponent from "../components/headerComponent";
 
@@ -54,7 +53,6 @@ const ProjectTemplate = ({ pageContext }) => {
 
 	return (
 		<section style={pageContainer}>
-			<Navbar />
 			<div style={sectionStyle}>
 				<div style={leftContainer}>
 					<HeaderComponent title={title} subtitle={subtitle} />
@@ -66,11 +64,6 @@ const ProjectTemplate = ({ pageContext }) => {
 					<div style={imageWrapper}>
 					{imageList.map((imgSrc, index) => (
 						<img key={index} src={imgSrc} alt={title} />
-						// <GatsbyImage
-						// 	key={index}
-						// 	image={getImage(imgSrc)} // Cette ligne peut ne pas fonctionner si `imgSrc` n'est pas une instance valide de GatsbyImageData
-						// 	alt={title}
-						// />
 					))}
 					</div>
 				</div>
