@@ -13,7 +13,7 @@ const ContactPage = () => {
 						<Button url="https://github.com/jaberhe" text="GITHUB" />
 					</div>
 				</div>
-				<div className="item3" />
+				{/* <div className="item3" /> */}
 			</div>
 
 			<div className="contact-right">
