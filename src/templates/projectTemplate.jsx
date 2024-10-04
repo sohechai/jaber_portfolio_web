@@ -1,6 +1,6 @@
 import React from "react";
-import HeaderComponent from "../components/headerComponent";
-import Button from "../components/Button";
+import HeaderComponent from "../components/HeaderComponent.jsx";
+import Button from "../components/Button.jsx";
 
 const ProjectTemplate = ({ pageContext }) => {
 	const { title, subtitle, description, images, videos } = pageContext;
