@@ -9,7 +9,7 @@ const Navbar = () => {
 				<ul className="list">
 					<li className="CVStyle">
 						<a
-							href="../data/CV_Jaber_Hechaichi.pdf"
+							href="/data/CV_Jaber_Hechaichi.pdf"
 							download="CV_Jaber_Hechaichi.pdf"
 							className="cv-style"
 						>
