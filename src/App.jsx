@@ -1,4 +1,3 @@
-// App.js
 import React from 'react';
 import { Routes, Route, useParams } from 'react-router-dom';
 import './style/style.less';
@@ -39,7 +38,7 @@ const ProjectTemplateWrapper = () => {
 	);
 
 	if (!project) {
-		return <div>Projet non trouvé</div>; 
+		return <div>Projet non trouvé</div>;
 	}
 
 	return <ProjectTemplate pageContext={project} />;

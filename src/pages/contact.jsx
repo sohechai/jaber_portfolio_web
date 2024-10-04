@@ -1,27 +1,40 @@
-import * as React from "react";
-import Navbar from "../components/Navbar";
-
-const pageContainer = {
-	display: "flex",
-	flexDirection: "column",
-	height: "calc(100vh - 32px)",
-}
-
-const sectionStyle = {
-	display: 'flex',
-	flexDirection: 'column',
-	justifyContent: 'flex-end',
-	border: 'var(--border)',
-	marginTop: '8px',
-	padding: '24px',
-	height: '100%',
-}
+import React from "react";
+import image from '../images/archi.png';
+import Button from "../components/Button";
 
 const ContactPage = () => {
 	return (
-		<section style={pageContainer}>
-			<div style={sectionStyle}>
-				<h1>CONTACT PAGE</h1>
+		<section className="contact-wrapper">
+			<div className="contact-left">
+				<div className="item1">
+					<h1>CONTACTS</h1>
+					<div className="item2">
+						<Button url="https://www.linkedin.com/in/jaberhe/" text="LINKEDIN" />
+						<Button url="https://github.com/jaberhe" text="GITHUB" />
+					</div>
+				</div>
+				<div className="item3" />
+			</div>
+
+			<div className="contact-right">
+				<h2>SEND ME A MESSAGE</h2>
+				<form
+					name="contact"
+					action="https://formspree.io/f/mqazvrey"
+					method="POST"
+				>
+					<input type="hidden" name="form-name" value="contact" />
+					<div className="form-group">
+						<input type="text" id="name" name="name" placeholder="name" required />
+					</div>
+					<div className="form-group">
+						<input type="email" id="email" name="email" placeholder="email" required />
+					</div>
+					<div className="form-group-text-area">
+						<textarea id="message" name="message" placeholder="message" required />
+					</div>
+					<button type="submit" className="form-button">Send</button>
+				</form>
 			</div>
 		</section>
 	);

@@ -25,7 +25,7 @@ const projectsData = [
 	{
 		title: "BET CONTROL",
 		subtitle: "ARE YOU A WINNER ?",
-		description: "Apple",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		githubLink: "https://github.com/JaberHe/betcontrol",
 		websiteLink: "https://betcontrolv1.streamlit.app/betControl",
 		mainImage: betcontrolMainImage,
@@ -39,7 +39,7 @@ const projectsData = [
 	{
 		title: "FLAPPY BIRD",
 		subtitle: "IA GÉNÉRATIVE",
-		description: "Description for project two.",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		githubLink: "https://github.com/JaberHe/flappy_bird",
 		mainImage: flappybirdMainImage,
 		videos: {
@@ -49,7 +49,7 @@ const projectsData = [
 	{
 		title: "MNIST",
 		subtitle: "DETECTION DE CHIFFRES",
-		description: "Description for project three.",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		githubLink: "https://github.com/JaberHe/MNIST_num_reco",
 		mainImage: mnistMainImage,
 		images: {
@@ -60,7 +60,7 @@ const projectsData = [
 	{
 		title: "TITANIC",
 		subtitle: "MODÈLE DE PRÉDICTION",
-		description: "Description for project four.",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		githubLink: "https://github.com/JaberHe/survivants_titanic",
 		mainImage: titanicMainImage,
 		images: {
@@ -70,7 +70,7 @@ const projectsData = [
 	{
 		title: "AIRBNB",
 		subtitle: "DYNAMIQUES DE RÉSERVATIONS",
-		description: "Description for project five.",
+		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		websiteLink: "https://lookerstudio.google.com/reporting/5eff2709-d7d1-4813-9378-9c8f9a6df7d3",
 		mainImage: airbnbMainImage,
 		images: {
