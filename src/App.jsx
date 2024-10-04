@@ -1,7 +1,6 @@
 import React from 'react';
 import { Routes, Route, useParams } from 'react-router-dom';
 import './style/style.less';
-import Navbar from './components/Navbar.jsx';
 import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
