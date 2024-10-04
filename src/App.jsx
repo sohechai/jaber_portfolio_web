@@ -6,6 +6,7 @@ import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
 import ProjectTemplate from './templates/projectTemplate.jsx';
 import projectsData from './data/projects-data.js';
+import Navbar from './components/navbar.jsx';
 
 const pageStyles = {
 	display: "flex",
