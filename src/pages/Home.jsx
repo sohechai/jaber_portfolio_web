@@ -55,7 +55,7 @@ const Home = () => {
 						handleMouseLeave();
 					}}
 					onClick={() => handleClick(slug)}
-					style={{ cursor: 'pointer' }}
+					style={{ cursor: 'pointer', width: 'fit-content' }}
 				>
 					<TitleComponent title={project.title} description={project.subtitle} />
 				</div>
