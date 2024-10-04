@@ -9,8 +9,8 @@ const Navbar = () => {
 				<ul className="list">
 					<li className="CVStyle">
 						<a
-							href="/path/to/CV.pdf"
-							download="CV.pdf"
+							href="../data/CV_Jaber_Hechaichi.pdf"
+							download="CV_Jaber_Hechaichi.pdf"
 							className="cv-style"
 						>
 							CV
